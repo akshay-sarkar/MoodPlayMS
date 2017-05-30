@@ -1,0 +1,61 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="edu.uta.cse5320.moodplayms.RecognizeActivity">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:weightSum="1">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="4dp"
+            android:text="Choose an Image"
+            android:textAlignment="center"
+            android:textSize="20dp"/>
+
+        <Button
+            android:id="@+id/buttonSelectImage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="selectImage"
+            android:text="Select Image"
+            />
+
+        <ImageView
+                android:id="@+id/selectedImage"
+                android:layout_width="200dp"
+                android:layout_height="200dp"
+                android:layout_toRightOf="@+id/image_control"
+                android:layout_toEndOf="@+id/image_control"
+                android:background="#E0E0E0" />
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:layout_weight="1.03">
+
+            <Button
+                android:id="@+id/buttonStopMusic"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="onStopMusic"
+                android:text="Stop Music"
+                android:visibility="gone"/>
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:inputType="textMultiLine"
+                android:ems="10"
+                android:id="@+id/editTextResult"
+                android:layout_weight="1" />
+        </LinearLayout>
+    </LinearLayout>
+
+</RelativeLayout>
